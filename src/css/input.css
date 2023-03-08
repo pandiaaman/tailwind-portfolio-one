@@ -65,7 +65,7 @@ body {
   height: 80vh;
 }
 .nav-dot {
-  transition: opactiy 1s, background 4s, border-color 1s;
+  /* transition: opactiy 1s, background 4s, border-color 1s; */
 }
 .selected-circle {
   @apply border-theme bg-theme;
