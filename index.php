@@ -1,3 +1,5 @@
+<?php
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Project</title>
     <link rel="stylesheet" href="./src/css/main.css" />
+    <link rel="icon" type="image/x-icon" href="./img/amanicon.jpg" />
     <!-- look at the scripts in package.json :
         input.css is file where we make our customized changes
         main.css is the file that is created as an output from the input.css-->
