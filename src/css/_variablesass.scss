@@ -1,0 +1,22 @@
+$lblue: lightblue;
+$primaryBtnErrorClr: red;
+$textPrimaryClr: #555;
+$hoverBtnClr: blue;
+$activeBtnClr: green;
+$bodyLightClr: #f4f4f4;
+
+$font-stack: Arial, Helvetica, sans-serif;
+$primaryClr: #0e6cff;
+// $primaryClr: #e0ffff;
+$secondaryClr: #ff8700;
+
+// $lightClr: set-text-color($primaryClr);
+// $lightClr: #f4f4f4;
+//funciton to change the text color in case the background color is set to light
+@function set-text-color($color) {
+  @if (lightness($color) > 70) {
+    @return #333;
+  } @else {
+    @return #f4f4f4;
+  }
+}

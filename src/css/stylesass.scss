@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@import "variablesass";
+
+@import "styleheadersass";
+
+@import "styleconditionalsass";
+
+@import "utilitiessass";
+
+@import "buttons";
+//see above we nested the button
+// header button {
+//   background-color: $primaryBtnErrorClr;
+// }
+
+body {
+  background-color: $bodyLightClr;
+  font-family: $font-stack;
+  line-height: 1.6;
+}
+
+.contact button {
+  background-color: $primaryBtnErrorClr;
+}
+
+.contact {
+  @include flexCenter(row);
+}
+
+.contact2 {
+  @extend header; //we can include all the styles from a different specification
+  width: 100% - 20%; //we can do mathematical operations
+}
+
+.triangle {
+  @include triangle(500px, blue, right);
+  // width: 10px;
+  // height: 10px;
+  // background-color: black;
+}
+
+$textClr: set-text-color($primaryClr);
+
+.container {
+  background-color: $primaryClr;
+  @extend %centercontainer;
+  color: $textClr;
+}
+
+nav {
+  @include flexCenter(row);
+  h1 {
+    padding: 2rem;
+  }
+  ul {
+    @include flexCenter(row);
+    li {
+      list-style: none;
+      padding: 2rem;
+      a {
+        text-decoration: none;
+        color: $textClr;
+      }
+    }
+  }
+}
+
+.showcase-content {
+  @include flexCenter(row);
+  text-align: center;
+  .showcase-left {
+    h1 {
+      font-size: 3.4rem;
+      line-height: 1.2;
+    }
+    p {
+      margin-bottom: 4rem;
+    }
+    a {
+      text-decoration: none;
+      color: $textClr;
+      padding: 1rem;
+    }
+    .btn-primary {
+      @extend %btn;
+      background-color: lighten($primaryClr, 10%);
+    }
+    .btn-secondary {
+      @extend %btn;
+      background-color: $secondaryClr;
+      color: $textClr;
+      &:hover {
+        display: inline-block;
+        background-color: lighten($secondaryClr, 10%);
+      }
+    }
+  }
+  img {
+    width: 50%;
+    height: auto;
+  }
+}

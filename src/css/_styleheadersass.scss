@@ -1,0 +1,43 @@
+@mixin flexCenter($direction) {
+  //mixin are like functions
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+header {
+  @include flexCenter(column);
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+
+  background-color: $lblue;
+  height: 100vh;
+
+  font-weight: 400;
+  color: $textPrimaryClr;
+  button {
+    //nesting in sass
+    background-color: $primaryBtnErrorClr;
+    //on hover of the button
+    &:hover {
+      background-color: $hoverBtnClr;
+    }
+    &:active {
+      background-color: $activeBtnClr;
+    }
+    &::after {
+      content: "helloo this is after";
+    }
+    &::before {
+      content: "before";
+    }
+  }
+  p {
+    font-weight: 400;
+  }
+  .container {
+    font-family: "Courier New", Courier, monospace;
+  }
+}
